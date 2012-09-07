@@ -1,0 +1,206 @@
+// # Simple Grid
+// ## Responsive fluid-first grid
+
+
+// ### Phone & Defaults
+
+.row:before, .row:after {
+  content: "";
+  display:table;
+}
+.row:after {
+  clear:both;
+}
+.row {
+  width:100%;
+}
+
+.col1  { width:   8.333%; float: left; }
+.col2  { width:  16.666%; float: left; }
+.col3  { width:  24.999%; float: left; }
+.col4  { width:  33.333%; float: left; }
+.col5  { width:  41.666%; float: left; }
+.col6  { width:  50.000%; float: left; }
+.col7  { width:  58.333%; float: left; }
+.col8  { width:  66.666%; float: left; }
+.col9  { width:  74.999%; float: left; }
+.col10 { width:  83.333%; float: left; } 
+.col11 { width:  91.666%; float: left; }
+.col12 { width: 100.000%; float: left; }
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+	.phone-row:before, .phone-row:after {
+		content: "";
+		display: table;
+	}
+	.phone-row:after {
+		clear: both;
+	}
+	.phone-row {
+		width: 100%;
+	}
+	.phone-col1  { width:   8.333%; float: left; }
+	.phone-col2  { width:  16.666%; float: left; }
+	.phone-col3  { width:  24.999%; float: left; }
+	.phone-col4  { width:  33.333%; float: left; }
+	.phone-col5  { width:  41.666%; float: left; }
+	.phone-col6  { width:  50.000%; float: left; }
+	.phone-col7  { width:  58.333%; float: left; }
+	.phone-col8  { width:  66.666%; float: left; }
+	.phone-col9  { width:  74.999%; float: left; }
+	.phone-col10 { width:  83.333%; float: left; } 
+	.phone-col11 { width:  91.666%; float: left; }
+	.phone-col12 { width: 100.000%; float: left; }
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+	.phone-p-row:before, .phone-p-row:after {
+		content: "";
+		display: table;
+	}
+	.phone-p-row:after {
+		clear: both;
+	}
+	.phone-p-row {
+		width: 100%;
+	}
+	.phone-p-col1  { width:   8.333%; float: left; }
+	.phone-p-col2  { width:  16.666%; float: left; }
+	.phone-p-col3  { width:  24.999%; float: left; }
+	.phone-p-col4  { width:  33.333%; float: left; }
+	.phone-p-col5  { width:  41.666%; float: left; }
+	.phone-p-col6  { width:  50.000%; float: left; }
+	.phone-p-col7  { width:  58.333%; float: left; }
+	.phone-p-col8  { width:  66.666%; float: left; }
+	.phone-p-col9  { width:  74.999%; float: left; }
+	.phone-p-col10 { width:  83.333%; float: left; } 
+	.phone-p-col11 { width:  91.666%; float: left; }
+	.phone-p-col12 { width: 100.000%; float: left; }
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+	.phone-l-row:before, .phone-l-row:after {
+		content: "";
+		display: table;
+	}
+	.phone-l-row:after {
+		clear: both;
+	}
+	.phone-l-row {
+		width: 100%;
+	}
+	.phone-l-col1  { width:   8.333%; float: left; }
+	.phone-l-col2  { width:  16.666%; float: left; }
+	.phone-l-col3  { width:  24.999%; float: left; }
+	.phone-l-col4  { width:  33.333%; float: left; }
+	.phone-l-col5  { width:  41.666%; float: left; }
+	.phone-l-col6  { width:  50.000%; float: left; }
+	.phone-l-col7  { width:  58.333%; float: left; }
+	.phone-l-col8  { width:  66.666%; float: left; }
+	.phone-l-col9  { width:  74.999%; float: left; }
+	.phone-l-col10 { width:  83.333%; float: left; } 
+	.phone-l-col11 { width:  91.666%; float: left; }
+	.phone-l-col12 { width: 100.000%; float: left; }
+}
+
+
+/* Tablet  ------------------------------ */
+
+@media only screen and (min-width : 768px) {
+
+ .tablet-row:before, .tablet-row:after {
+    content: "";
+    display:table;
+  }
+  .tablet-row:after {
+    clear:both;
+  }
+  .tablet-row {
+    width:100%;
+  }
+  
+  .tablet-col1  { width:  8.333%; float: left; }
+  .tablet-col2  { width: 16.666%; float: left; }
+  .tablet-col3  { width: 24.999%; float: left; }
+  .tablet-col4  { width: 33.333%; float: left; }
+  .tablet-col5  { width: 41.666%; float: left; }
+  .tablet-col6  { width: 50.000%; float: left; }
+  .tablet-col7  { width: 58.333%; float: left; }
+  .tablet-col8  { width: 66.666%; float: left; }
+  .tablet-col9  { width: 74.999%; float: left; }
+  .tablet-col10 { width: 83.333%; float: left; } 
+  .tablet-col11 { width: 91.666%; float: left; }
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (orientation : portrait) {
+	.tablet-p-row:before, .tablet-p-row:after {
+		content: "";
+		display: table;
+	}
+	.tablet-p-row:after {
+		clear: both;
+	}
+	.tablet-p-row {
+		width: 100%;
+	}
+	.tablet-p-col1  { width:   8.333%; float: left; }
+	.tablet-p-col2  { width:  16.666%; float: left; }
+	.tablet-p-col3  { width:  24.999%; float: left; }
+	.tablet-p-col4  { width:  33.333%; float: left; }
+	.tablet-p-col5  { width:  41.666%; float: left; }
+	.tablet-p-col6  { width:  50.000%; float: left; }
+	.tablet-p-col7  { width:  58.333%; float: left; }
+	.tablet-p-col8  { width:  66.666%; float: left; }
+	.tablet-p-col9  { width:  74.999%; float: left; }
+	.tablet-p-col10 { width:  83.333%; float: left; } 
+	.tablet-p-col11 { width:  91.666%; float: left; }
+	.tablet-p-col12 { width: 100.000%; float: left; }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (orientation : landscape) {
+	.tablet-l-row:before, .tablet-l-row:after {
+		content: "";
+		display: table;
+	}
+	.tablet-l-row:after {
+		clear: both;
+	}
+	.tablet-l-row {
+		width: 100%;
+	}
+	.tablet-l-col1  { width:   8.333%; float: left; }
+	.tablet-l-col2  { width:  16.666%; float: left; }
+	.tablet-l-col3  { width:  24.999%; float: left; }
+	.tablet-l-col4  { width:  33.333%; float: left; }
+	.tablet-l-col5  { width:  41.666%; float: left; }
+	.tablet-l-col6  { width:  50.000%; float: left; }
+	.tablet-l-col7  { width:  58.333%; float: left; }
+	.tablet-l-col8  { width:  66.666%; float: left; }
+	.tablet-l-col9  { width:  74.999%; float: left; }
+	.tablet-l-col10 { width:  83.333%; float: left; } 
+	.tablet-l-col11 { width:  91.666%; float: left; }
+	.tablet-l-col12 { width: 100.000%; float: left; }
+}
+
+// Fixed (940px)
+//#grid > .core(@gridColumnWidth, @gridGutterWidth);
+
+// Fluid (940px)
+//#grid > .fluid(@fluidGridColumnWidth, @fluidGridGutterWidth);

@@ -1,0 +1,492 @@
+@import "reset.css";
+@import "grid.css";
+@import "forms.css";
+@import "flexslider.css";
+
+/* :: Scaffolding --------------------- */
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333333;
+	background-color: #ffffff;
+}
+a {
+	color: #4982c9;
+	text-decoration: none;
+}
+a:hover {
+	color: #2d5d98;
+	text-decoration: underline;
+}
+
+/* :: UTILITY CLASSES  --------------- */
+
+/* Quick floats */
+.pull-right {
+	float: right;
+}
+.pull-left {
+	float: left;
+}
+
+/* Toggling content */
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+
+/* Visibility */
+.invisible {
+	visibility: hidden;
+}
+
+/* Clearfix */
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* Grays ------------------------- */
+.black { background-color: #000; }
+.grayDarker { background-color: #222; }
+.grayDark { background-color: #333; }
+.gray { background-color: #555; }
+.grayLight { background-color: #999; }
+.grayLighter { background-color: #eee; }
+.white { background-color: #fff; }
+
+.white-txt {
+	color: white;
+}
+
+/* :: Header -------------------------- */
+header {
+	height: 105px;
+	padding: 0 0 0 40px;
+}
+
+.logo {
+	display: inline-block;
+	width: 350px;
+	height: 42px;
+	margin: 32px 0 0;
+	background: url('../img/office-depot-sprite.png') no-repeat 0 0;
+}
+
+.h-cart {
+	vertical-align: top;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+	.h-cart p {
+		margin: 10px 50px 5px 0;
+	}
+.h-cart-action {}
+	.h-cart-action button {
+		-webkit-appearance: none;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		border-right: solid 1px white;
+		border-top: none;
+		border-bottom: none;
+		border-left: none;
+		margin: 0;
+		padding: 0 16px;
+		height: 46px;
+		line-height: 46px;
+		float: right;
+		font-size: 16px;
+		background-color: #D2D2D2;
+		background-image: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+	}
+	.h-cart-action button:first-child {
+		border-right: none;
+		padding: 0 50px 0 0;
+		text-align: right;
+		background-color: #e8e8e8;
+	}
+	.h-cart-action button:last-child {
+		-webkit-border-radius: 10px 0 0 10px;
+		border-radius: 10px 0 0 10px;
+		background-color: #e8e8e8;
+	}
+
+.h-cart-total {
+	height: 46px;
+	line-height: 46px;
+	width: 246px;
+	background: #ccc;
+	float: right;
+}
+.h-cart-total p {
+	margin: 0 50px 0 0;
+	font-size: 18px;
+}
+.icon-cart {
+	background: url('../img/office-depot-sprite.png') no-repeat 0 -54px;
+	width: 26px;
+	height: 23px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-right: 5px;
+}
+
+/* :: Footer -------------------------- */
+footer {
+	background-color: #D2D2D2;
+	height: 42px;
+	padding: 0 50px 0 40px;
+	line-height: 42px;
+}
+.footer {
+	text-align: right;
+}
+.footer a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28px;
+	height: 28px;
+	margin-left: 5px;
+}
+.footer-cta {
+	font-weight: bold;
+	font-size: 14px;
+}
+.facebook { background: url('../img/office-depot-sprite.png') no-repeat 0 -180px; }
+.twitter { background: url('../img/office-depot-sprite.png') no-repeat -36px -180px; }
+.youtube { background: url('../img/office-depot-sprite.png') no-repeat -72px -180px; }
+
+/* :: Side bar Navigation -------------------------- */
+.side-bar {
+	background: #ccc;
+	width: 50px;
+	height: 510px;
+	float: right;
+	position: relative;
+	z-index: 60;
+	-webkit-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+	.side-bar ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		.side-bar li {
+			list-style: none;
+			border-bottom: solid 1px white;
+			height: 63px;
+		}
+		.side-bar li:active {
+			background-color: #efefef;
+		}
+		.side-bar li:first-child {
+			-webkit-border-radius: 10px 0 0 0;
+			border-radius: 10px 0 0 0;
+		}
+		.side-bar li > a {
+			color: white;
+			display: block;
+			text-align: center;
+			line-height: 63px;
+		}
+.side-bar-sub {
+	height: 646px;
+}
+.menu {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	position: relative;
+	z-index: 40;
+}
+	.menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.menu li {
+		border-bottom: solid 1px white;
+		background: #efefef;
+	}
+	.menu li:last-child {
+		border-bottom: none;
+	}
+		.menu li a {
+			display: block;
+			height: 63px;
+			width: 260px;
+			line-height: 63px;
+			padding: 0 20px;
+			font-size: 16px;
+			color: black;
+			text-decoration: none;
+		}
+		.menu li:active {
+			background: #999;
+		}
+			.menu li:active a {
+				color: white;
+			}
+			.menu li a span {
+				background: url('../img/office-depot-sprite.png') no-repeat -270px -54px;
+				width: 29px;
+				height: 28px;
+				float: right;
+				margin-top: 15px;
+			}
+.sub-menu {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	position: relative;
+	z-index: 40;
+	height: 510px;
+	overflow: auto;
+	background: #959595;
+	background: #777777;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3Nzc3NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iIzk1OTU5NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(left, #777777 0%, #959595 28%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#777777), color-stop(28%,#959595));
+	background: -webkit-linear-gradient(left, #777777 0%,#959595 28%);
+	background: -o-linear-gradient(left, #777777 0%,#959595 28%);
+	background: -ms-linear-gradient(left, #777777 0%,#959595 28%);
+	background: linear-gradient(to right, #777777 0%,#959595 28%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#959595',GradientType=1 );
+}
+	.sub-menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.sub-menu li {
+		border-bottom: solid 1px #ccc;
+		background: #959595;
+	}
+		.sub-menu li a {
+			display: block;
+			height: 50px;
+			width: 260px;
+			line-height: 50px;
+			padding: 0 20px;
+			font-size: 12px;
+			color: white;
+			text-decoration: none;
+			background: #777777;
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3Nzc3NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iIzk1OTU5NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+			background: -moz-linear-gradient(left, #777777 0%, #959595 28%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,#777777), color-stop(28%,#959595));
+			background: -webkit-linear-gradient(left, #777777 0%,#959595 28%);
+			background: -o-linear-gradient(left, #777777 0%,#959595 28%);
+			background: -ms-linear-gradient(left, #777777 0%,#959595 28%);
+			background: linear-gradient(to right, #777777 0%,#959595 28%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#959595',GradientType=1 );
+		}
+			.sub-menu li a span {
+				background: url('../img/office-depot-sprite.png') no-repeat -270px -108px;
+				width: 12px;
+				height: 9px;
+				float: right;
+				margin-top: 22px;
+			}
+	.sub-menu ul ul li a {
+		background: #555;
+		padding: 0 0 0 40px;
+	}
+	.sub-menu ul ul li {
+		border-bottom: solid 1px #999;
+	}
+	.sub-menu ul ul li:last-child {
+		border-bottom: none;
+	}
+.icon-menu {
+	background: url('../img/office-depot-sprite.png') no-repeat -36px -54px;
+	width: 28px;
+	height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon-search {
+	background: url('../img/office-depot-sprite.png') no-repeat -72px -54px;
+	width: 24px;
+	height: 23px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon-account {
+	background: url('../img/office-depot-sprite.png') no-repeat 0 -90px;
+	width: 23px;
+	height: 21px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon-location {
+	background: url('../img/office-depot-sprite.png') no-repeat -144px -54px;
+	width: 17px;
+	height: 26px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon-categories {
+	background: url('../img/office-depot-sprite.png') no-repeat -180px -54px;
+	width: 48px;
+	height: 47px;
+	display: block;
+	margin: 10px auto;
+}
+.icon-monitor {
+	background: url('../img/office-depot-sprite.png') no-repeat 0 -126px;
+	display: inline-block;
+	width: 45px;
+	height: 38px;
+}
+.icon-headset {
+	background: url('../img/office-depot-sprite.png') no-repeat -54px -126px;
+	display: inline-block;
+	width: 39px;
+	height: 43px;
+}
+.icon-document {
+	background: url('../img/office-depot-sprite.png') no-repeat -108px -126px;
+	display: inline-block;
+	width: 32px;
+	height: 39px;
+}
+
+/* :: Flexslider -------------------------- */
+.flexslider {
+	margin: 0;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.flex-control-nav {
+	bottom: -27px;
+}
+/* :: Content Structure -------------------------- */
+.main-container {
+	margin: 0;
+	overflow: hidden;
+}
+.main-content {
+	padding: 0;
+	margin: -5px 80px 40px 35px;
+	position: relative;
+}
+.main-content-inner {
+	position: relative;
+	margin-top: -10px;
+}
+a article {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+}
+article {
+	background-color: #ccc;
+	margin: 5px;
+	padding: 18px 12px 0;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+	article.small {
+		height: 120px;
+	}
+	article.medium {
+		height: 250px;
+	}
+
+	article span {
+		font-size: 20px;
+		margin: 0 0 10px;
+	}
+	article a {
+		font-size: 20px;
+		display: block;
+		text-decoration: none;
+		color: black;
+	}
+		article a:hover {
+			text-decoration: none;
+		}
+	article p {
+		font-size: 18px;
+		margin: 0 0 15px;
+	}
+
+	article.module {
+		display: block;
+	}
+
+.slide-menu {
+	margin-left: -260px;
+}
+.slide-sub-menu {
+	margin-left: -570px;
+}
+.icon-lg-location {
+	background: url('../img/office-depot-sprite.png') no-repeat -108px -54px;
+	width: 32px;
+	height: 51px;
+	display: block;
+	margin: 10px auto;
+}
+.services {
+	text-align: center;
+}
+	.services i {
+		margin: 10px 18px;
+	}
+.bgimage-toner {
+	background: #ccc url('../img/bgimage-ink-toner.jpg') no-repeat center center;
+}
+.bgimage-catalog {
+	background: #333 url('../img/bgimage-catalog.jpg') no-repeat 23px 36px;
+}
+.outline {
+	background-color: white;
+	border: solid 2px #ccc;
+
+}
+/* :: Forms -------------------------- */
+input[type="search"] {
+	height: 50px;
+	font-size: 18px;
+	padding: 0 10px;
+	line-height: 22px;
+	-webkit-border-radius: 8px 0 0 8px;
+	   -moz-border-radius: 8px 0 0 8px;
+			border-radius: 8px 0 0 8px;
+}
+.input-inline.input-append .addon.append {
+	height: 50px;
+	padding: 8px 20px;
+	-webkit-border-radius: 0 8px 8px 0;
+	   -moz-border-radius: 0 8px 8px 0;
+			border-radius: 0 8px 8px 0;
+}
+form.search-container {
+	margin-bottom: 0;
+}
